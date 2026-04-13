@@ -18,6 +18,7 @@ public class RedisEventPublisher : IEventPublisher
         var db = _redis.GetSubscriber();
         var channel = $"couple:{coupleId}";
         var json = JsonSerializer.Serialize(payload);
+        // StackExchange.Redis PublishAsync does not support CancellationToken
         await db.PublishAsync(RedisChannel.Literal(channel), json);
     }
 }

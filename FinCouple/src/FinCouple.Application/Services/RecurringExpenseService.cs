@@ -60,7 +60,8 @@ public class RecurringExpenseService : IRecurringExpenseService
                 recurring.Description, recurring.Amount, today, true, recurring.Id);
 
             await _expenseRepository.AddAsync(expense, cancellationToken);
-            await _eventPublisher.PublishExpenseCreatedAsync(expense.CoupleId, new
+
+            var expensePayload = new
             {
                 expense.Id,
                 expense.CoupleId,
@@ -71,7 +72,8 @@ public class RecurringExpenseService : IRecurringExpenseService
                 expense.Date,
                 expense.IsRecurring,
                 expense.CreatedAt
-            }, cancellationToken);
+            };
+            await _eventPublisher.PublishExpenseCreatedAsync(expense.CoupleId, expensePayload, cancellationToken);
 
             recurring.AdvanceNextDueDate();
             await _recurringExpenseRepository.UpdateAsync(recurring, cancellationToken);

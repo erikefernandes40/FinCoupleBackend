@@ -26,7 +26,12 @@ public class RecurrenceHostedService : IHostedService, IDisposable
         return Task.CompletedTask;
     }
 
-    private async void ProcessRecurrences(object? state)
+    private void ProcessRecurrences(object? state)
+    {
+        _ = ProcessRecurrencesAsync();
+    }
+
+    private async Task ProcessRecurrencesAsync()
     {
         _logger.LogInformation("Processing due recurring expenses at {Time}", DateTime.UtcNow);
         try
