@@ -1,0 +1,12 @@
+/home/runner/work/FinCoupleBackend/FinCoupleBackend/FinCouple/src/FinCouple.Domain/bin/Debug/net8.0/FinCouple.Domain.deps.json
+/home/runner/work/FinCoupleBackend/FinCoupleBackend/FinCouple/src/FinCouple.Domain/bin/Debug/net8.0/FinCouple.Domain.dll
+/home/runner/work/FinCoupleBackend/FinCoupleBackend/FinCouple/src/FinCouple.Domain/bin/Debug/net8.0/FinCouple.Domain.pdb
+/home/runner/work/FinCoupleBackend/FinCoupleBackend/FinCouple/src/FinCouple.Domain/obj/Debug/net8.0/FinCouple.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/work/FinCoupleBackend/FinCoupleBackend/FinCouple/src/FinCouple.Domain/obj/Debug/net8.0/FinCouple.Domain.AssemblyInfoInputs.cache
+/home/runner/work/FinCoupleBackend/FinCoupleBackend/FinCouple/src/FinCouple.Domain/obj/Debug/net8.0/FinCouple.Domain.AssemblyInfo.cs
+/home/runner/work/FinCoupleBackend/FinCoupleBackend/FinCouple/src/FinCouple.Domain/obj/Debug/net8.0/FinCouple.Domain.csproj.CoreCompileInputs.cache
+/home/runner/work/FinCoupleBackend/FinCoupleBackend/FinCouple/src/FinCouple.Domain/obj/Debug/net8.0/FinCouple.Domain.sourcelink.json
+/home/runner/work/FinCoupleBackend/FinCoupleBackend/FinCouple/src/FinCouple.Domain/obj/Debug/net8.0/FinCouple.Domain.dll
+/home/runner/work/FinCoupleBackend/FinCoupleBackend/FinCouple/src/FinCouple.Domain/obj/Debug/net8.0/refint/FinCouple.Domain.dll
+/home/runner/work/FinCoupleBackend/FinCoupleBackend/FinCouple/src/FinCouple.Domain/obj/Debug/net8.0/FinCouple.Domain.pdb
+/home/runner/work/FinCoupleBackend/FinCoupleBackend/FinCouple/src/FinCouple.Domain/obj/Debug/net8.0/ref/FinCouple.Domain.dll
