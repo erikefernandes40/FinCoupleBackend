@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useSSE } from '../hooks/useSSE';
 import api from '../api/axiosInstance';
@@ -7,28 +7,25 @@ export default function ExpensesPage({ onNavigate }) {
   const { user } = useAuth();
   const coupleId = user?.coupleId;
   const { expenses: sseExpenses } = useSSE(coupleId);
-  const [expenses, setExpenses] = useState([]);
+  const [fetchedExpenses, setFetchedExpenses] = useState([]);
   const [form, setForm] = useState({ description: '', amount: '', categoryId: '', date: new Date().toISOString().split('T')[0] });
   const [categories, setCategories] = useState([]);
   const [error, setError] = useState('');
 
   useEffect(() => {
     if (!coupleId) return;
-    api.get(`/api/expenses/couple/${coupleId}`).then(({ data }) => setExpenses(data)).catch(() => {});
+    api.get(`/api/expenses/couple/${coupleId}`).then(({ data }) => setFetchedExpenses(data)).catch(() => {});
     api.get('/api/categories').then(({ data }) => setCategories(data)).catch(() => {});
   }, [coupleId]);
 
-  // Merge SSE new expenses
-  useEffect(() => {
-    if (!sseExpenses.length) return;
-    setExpenses((prev) => {
-      const merged = [...prev];
-      for (const exp of sseExpenses) {
-        if (!merged.find((e) => e.id === exp.id)) merged.unshift(exp);
-      }
-      return merged;
-    });
-  }, [sseExpenses]);
+  // Merge fetched + SSE expenses, deduplicating by id
+  const expenses = useMemo(() => {
+    const map = new Map(fetchedExpenses.map((e) => [e.id, e]));
+    for (const exp of sseExpenses) {
+      if (!map.has(exp.id)) map.set(exp.id, exp);
+    }
+    return [...map.values()].sort((a, b) => new Date(b.date) - new Date(a.date));
+  }, [fetchedExpenses, sseExpenses]);
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -46,7 +43,7 @@ export default function ExpensesPage({ onNavigate }) {
         isRecurring: false,
       };
       const { data } = await api.post('/api/expenses', payload);
-      setExpenses((prev) => [data, ...prev]);
+      setFetchedExpenses((prev) => [data, ...prev]);
       setForm({ description: '', amount: '', categoryId: '', date: new Date().toISOString().split('T')[0] });
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to create expense');
@@ -55,7 +52,7 @@ export default function ExpensesPage({ onNavigate }) {
 
   const handleDelete = async (id) => {
     await api.delete(`/api/expenses/${id}`);
-    setExpenses((prev) => prev.filter((e) => e.id !== id));
+    setFetchedExpenses((prev) => prev.filter((e) => e.id !== id));
   };
 
   return (

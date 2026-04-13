@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinCouple.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5504ecc6a4f1c5e01256c42848ae6e4372346d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1eae32946e1a74237da7346f755db3008e91c41")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinCouple.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinCouple.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
