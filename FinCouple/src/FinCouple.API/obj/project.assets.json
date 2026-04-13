@@ -4396,7 +4396,7 @@
     ]
   },
   "packageFolders": {
-    "/home/runner/.nuget/packages/": {}
+    "/tmp/codeql-scratch-dd1ee059aa83c640/dbs/csharp/working/packages": {}
   },
   "project": {
     "version": "1.0.0",
@@ -4404,7 +4404,7 @@
       "projectUniqueName": "/home/runner/work/FinCoupleBackend/FinCoupleBackend/FinCouple/src/FinCouple.API/FinCouple.API.csproj",
       "projectName": "FinCouple.API",
       "projectPath": "/home/runner/work/FinCoupleBackend/FinCoupleBackend/FinCouple/src/FinCouple.API/FinCouple.API.csproj",
-      "packagesPath": "/home/runner/.nuget/packages/",
+      "packagesPath": "/tmp/codeql-scratch-dd1ee059aa83c640/dbs/csharp/working/packages",
       "outputPath": "/home/runner/work/FinCoupleBackend/FinCoupleBackend/FinCouple/src/FinCouple.API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
@@ -4483,6 +4483,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.25, 8.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[8.0.25, 8.0.25]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.25, 8.0.25]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"

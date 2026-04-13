@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "oib+bNGJUFg=",
+  "dgSpecHash": "Gq+n2YCRG7k=",
   "success": true,
   "projectFilePath": "/home/runner/work/FinCoupleBackend/FinCoupleBackend/FinCouple/src/FinCouple.Application/FinCouple.Application.csproj",
   "expectedPackageFiles": [
-    "/home/runner/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
-    "/home/runner/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.2/microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512"
+    "/tmp/codeql-scratch-dd1ee059aa83c640/dbs/csharp/working/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
+    "/tmp/codeql-scratch-dd1ee059aa83c640/dbs/csharp/working/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.2/microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "/tmp/codeql-scratch-dd1ee059aa83c640/dbs/csharp/working/packages/microsoft.netcore.app.ref/8.0.25/microsoft.netcore.app.ref.8.0.25.nupkg.sha512",
+    "/tmp/codeql-scratch-dd1ee059aa83c640/dbs/csharp/working/packages/microsoft.aspnetcore.app.ref/8.0.25/microsoft.aspnetcore.app.ref.8.0.25.nupkg.sha512"
   ],
   "logs": []
 }
