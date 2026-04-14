@@ -1,0 +1,29 @@
+# .NET
+*.user
+*.suo
+.vs/
+bin/
+obj/
+*.swp
+*.sln.docstates
+.idea/
+*.DS_Store
+*.log
+TestResults/
+
+# Node
+node_modules/
+dist/
+.env
+.env.local
+.env.production
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker
+.dockerignore
+
+# EF migrations output
+*.pfx
